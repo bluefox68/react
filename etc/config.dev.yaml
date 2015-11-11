@@ -1,0 +1,9 @@
+config:
+  port : 8080
+  srcPath : "./src"
+  buildPath : "./build/"
+  isConCat : false
+  staticPrefix : "./react/"
+  domainPath : "./react/"
+  iconFontPath : "../imgs/iconfont/"
+  host : "localhost"

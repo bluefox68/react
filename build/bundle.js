@@ -23494,12 +23494,12 @@ var App = React.createClass({
           },
           React.createElement(
             Link,
-            { to: 'about', __source: {
+            { to: '/books', __source: {
                 fileName: '..\\..\\..\\..\\..\\src\\main.js',
                 lineNumber: 16
               }
             },
-            'About'
+            'BooksList'
           )
         ),
         React.createElement(
@@ -23512,12 +23512,12 @@ var App = React.createClass({
           },
           React.createElement(
             Link,
-            { to: 'users', __source: {
+            { to: '/movies', __source: {
                 fileName: '..\\..\\..\\..\\..\\src\\main.js',
                 lineNumber: 17
               }
             },
-            'Inbox'
+            'MoviesList'
           )
         )
       )
@@ -23525,8 +23525,8 @@ var App = React.createClass({
   }
 });
 
-var About = React.createClass({
-  displayName: 'About',
+var BooksList = React.createClass({
+  displayName: 'BooksList',
 
   render: function () {
     return React.createElement(
@@ -23537,13 +23537,48 @@ var About = React.createClass({
           lineNumber: 27
         }
       },
-      'fsfdsfsdf'
+      React.createElement(
+        'p',
+        {
+          __source: {
+            fileName: '..\\..\\..\\..\\..\\src\\main.js',
+            lineNumber: 28
+          }
+        },
+        React.createElement(
+          Link,
+          { to: '/', __source: {
+              fileName: '..\\..\\..\\..\\..\\src\\main.js',
+              lineNumber: 28
+            }
+          },
+          '首页'
+        )
+      ),
+      React.createElement(
+        'p',
+        {
+          __source: {
+            fileName: '..\\..\\..\\..\\..\\src\\main.js',
+            lineNumber: 29
+          }
+        },
+        React.createElement(
+          Link,
+          { to: '/movies', __source: {
+              fileName: '..\\..\\..\\..\\..\\src\\main.js',
+              lineNumber: 29
+            }
+          },
+          'MoviesList'
+        )
+      )
     );
   }
 });
 
-var Users = React.createClass({
-  displayName: 'Users',
+var MoviesList = React.createClass({
+  displayName: 'MoviesList',
 
   render: function () {
     return React.createElement(
@@ -23551,10 +23586,45 @@ var Users = React.createClass({
       {
         __source: {
           fileName: '..\\..\\..\\..\\..\\src\\main.js',
-          lineNumber: 37
+          lineNumber: 38
         }
       },
-      '13123123'
+      React.createElement(
+        'p',
+        {
+          __source: {
+            fileName: '..\\..\\..\\..\\..\\src\\main.js',
+            lineNumber: 39
+          }
+        },
+        React.createElement(
+          Link,
+          { to: '/', __source: {
+              fileName: '..\\..\\..\\..\\..\\src\\main.js',
+              lineNumber: 39
+            }
+          },
+          '首页'
+        )
+      ),
+      React.createElement(
+        'p',
+        {
+          __source: {
+            fileName: '..\\..\\..\\..\\..\\src\\main.js',
+            lineNumber: 40
+          }
+        },
+        React.createElement(
+          Link,
+          { to: '/books', __source: {
+              fileName: '..\\..\\..\\..\\..\\src\\main.js',
+              lineNumber: 40
+            }
+          },
+          'BooksList'
+        )
+      )
     );
   }
 });
@@ -23563,27 +23633,24 @@ var routes = React.createElement(
   Router,
   { location: 'history', __source: {
       fileName: '..\\..\\..\\..\\..\\src\\main.js',
-      lineNumber: 46
+      lineNumber: 48
     }
   },
-  React.createElement(
-    Route,
-    { path: '/', component: App, __source: {
-        fileName: '..\\..\\..\\..\\..\\src\\main.js',
-        lineNumber: 47
-      }
-    },
-    React.createElement(Route, { path: 'about', name: 'about', component: About, __source: {
-        fileName: '..\\..\\..\\..\\..\\src\\main.js',
-        lineNumber: 48
-      }
-    }),
-    React.createElement(Route, { path: 'users', name: 'users', component: Users, __source: {
-        fileName: '..\\..\\..\\..\\..\\src\\main.js',
-        lineNumber: 49
-      }
-    })
-  )
+  React.createElement(Route, { path: '/', component: App, __source: {
+      fileName: '..\\..\\..\\..\\..\\src\\main.js',
+      lineNumber: 49
+    }
+  }),
+  React.createElement(Route, { path: 'books', component: BooksList, __source: {
+      fileName: '..\\..\\..\\..\\..\\src\\main.js',
+      lineNumber: 50
+    }
+  }),
+  React.createElement(Route, { path: 'movies', component: MoviesList, __source: {
+      fileName: '..\\..\\..\\..\\..\\src\\main.js',
+      lineNumber: 51
+    }
+  })
 );
 
 ReactDOM.render(routes, document.getElementById('example'));

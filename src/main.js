@@ -13,29 +13,31 @@ var App = React.createClass({
 			<div>
         <h1>App</h1>
         <ul>
-          <li><Link to="about">About</Link></li>
-          <li><Link to="users">Inbox</Link></li>
+          <li><Link to="/books">BooksList</Link></li>
+          <li><Link to="/movies">MoviesList</Link></li>
         </ul>
       </div>
 		);
 	}
 });
 
-var About = React.createClass({
+var BooksList = React.createClass({
 	render:function(){
 		return (
 			<div>
-        fsfdsfsdf
+        <p><Link to="/">首页</Link></p>
+        <p><Link to="/movies">MoviesList</Link></p>
       </div>
 		);
 	}
 });
 
-var Users = React.createClass({
+var MoviesList = React.createClass({
 	render:function(){
 		return (
 			<div>
-      13123123
+        <p><Link to="/">首页</Link></p>
+        <p><Link to="/books">BooksList</Link></p>
       </div>
 		);
 	}
@@ -44,10 +46,9 @@ var Users = React.createClass({
 
 var routes = (
   <Router location="history">
-    <Route path="/" component={App}>
-      <Route path="about" name="about" component={About}/>
-      <Route path="users" name="users" component={Users} />
-    </Route>
+    <Route path="/" component={App} />
+    <Route path="books" component={BooksList}/>
+    <Route path="movies" component={MoviesList} />
   </Router>
 );
 
